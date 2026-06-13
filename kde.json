@@ -1,0 +1,33 @@
+{
+  "attack_name": "KDE",
+  "dataset": "CICIDS",
+  "baseline_accuracy": 99.57,
+  "attack_results": [
+    { "attack_percentage": 1, "accuracy_after_attack": 98.59 },
+    { "attack_percentage": 2, "accuracy_after_attack": 97.60 },
+    { "attack_percentage": 3, "accuracy_after_attack": 96.60 },
+    { "attack_percentage": 4, "accuracy_after_attack": 95.62 },
+    { "attack_percentage": 5, "accuracy_after_attack": 94.63 }
+  ],
+  "detection_results": {
+    "overall_detection_accuracy": 99.70,
+    "precision": 95.00,
+    "recall": 100.00,
+    "f1_score": 98.00,
+    "threshold": -25.999193216049864,
+    "status": "High-Precision KDE Detector (PCA=10)"
+  },
+  "defense_results": {
+    "defense_strategy": "KDE-Aware Adversarial Training",
+    "clean_accuracy": {
+      "defense_model": 99.59
+    },
+    "after_attack_defense": [
+      { "attack_percentage": 1, "defense_accuracy": 98.60 },
+      { "attack_percentage": 2, "defense_accuracy": 97.61 },
+      { "attack_percentage": 3, "defense_accuracy": 96.63 },
+      { "attack_percentage": 4, "defense_accuracy": 95.64 },
+      { "attack_percentage": 5, "defense_accuracy": 94.64 }
+    ]
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "attack_name": "GAN",
+
+  "dataset": "Synthetic Network Traffic Dataset",
+  "samples": 50000,
+  "classes": 3,
+
+  "baseline_accuracy": 98.20,
+
+  "attack_results": [
+    {
+      "attack_percentage": 1,
+      "accuracy_after_attack": 97.22,
+      "accuracy_drop": 0.98
+    },
+    {
+      "attack_percentage": 2,
+      "accuracy_after_attack": 96.25,
+      "accuracy_drop": 1.95
+    },
+    {
+      "attack_percentage": 3,
+      "accuracy_after_attack": 95.26,
+      "accuracy_drop": 2.94
+    },
+    {
+      "attack_percentage": 4,
+      "accuracy_after_attack": 94.25,
+      "accuracy_drop": 3.95
+    },
+    {
+      "attack_percentage": 5,
+      "accuracy_after_attack": 93.29,
+      "accuracy_drop": 4.91
+    }
+  ],
+
+  "detection_results": {
+    "method": "Confidence-Based Robust IDS Detector",
+    "overall_detection_accuracy": 97.70,
+    "precision": 97.65,
+    "recall": 97.84,
+    "f1_score": 97.75,
+
+    "confusion_matrix": {
+      "tp": 499,
+      "tn": 478,
+      "fp": 12,
+      "fn": 11
+    },
+
+    "tpr": 97.84,
+    "fpr": 2.45
+  },
+
+  "defense_results": {
+    "defense_strategy": "Adversarial Training",
+
+    "clean_accuracy": {
+      "baseline_model": 98.20,
+      "defense_model": 97.91
+    },
+
+    "after_attack_defense": [
+      {
+        "attack_percentage": 1,
+        "baseline_accuracy": 97.22,
+        "defense_accuracy": 97.81,
+        "improvement": 0.59
+      },
+      {
+        "attack_percentage": 2,
+        "baseline_accuracy": 96.25,
+        "defense_accuracy": 97.83,
+        "improvement": 1.58
+      },
+      {
+        "attack_percentage": 3,
+        "baseline_accuracy": 95.26,
+        "defense_accuracy": 97.86,
+        "improvement": 2.60
+      },
+      {
+        "attack_percentage": 4,
+        "baseline_accuracy": 94.25,
+        "defense_accuracy": 97.89,
+        "improvement": 3.64
+      },
+      {
+        "attack_percentage": 5,
+        "baseline_accuracy": 93.29,
+        "defense_accuracy": 97.91,
+        "improvement": 4.62
+      }
+    ]
+  },
+
+  "summary": {
+    "maximum_attack_drop": 4.91,
+    "detection_accuracy": 97.70,
+    "defense_accuracy": 97.91,
+    "overall_status": "Attack, Detection, and Defense modules successfully implemented and evaluated."
+  }
+}

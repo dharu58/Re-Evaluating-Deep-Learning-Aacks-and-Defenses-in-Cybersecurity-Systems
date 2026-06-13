@@ -1,0 +1,67 @@
+{
+  "attack_name": "ZOO",
+
+  "dataset": "CICIDS",
+  "baseline_accuracy": 90.88,
+
+  "attack_results": [
+    {
+      "attack_percentage": 1,
+      "samples_attacked": 2089,
+      "accuracy_after_attack": 89.97
+    },
+    {
+      "attack_percentage": 2,
+      "samples_attacked": 4179,
+      "accuracy_after_attack": 89.08
+    },
+    {
+      "attack_percentage": 3,
+      "samples_attacked": 6268,
+      "accuracy_after_attack": 88.15
+    },
+    {
+      "attack_percentage": 4,
+      "samples_attacked": 8358,
+      "accuracy_after_attack": 87.24
+    },
+    {
+      "attack_percentage": 5,
+      "samples_attacked": 10447,
+      "accuracy_after_attack": 86.35
+    }
+  ],
+
+  "detection_results": {
+    "overall_detection_accuracy": 78.90,
+    "clean_detection_accuracy": 92.60,
+    "attack_detection_accuracy": 65.20
+  },
+
+  "defense_results": {
+    "clean_accuracy": 99.997,
+
+    "after_attack_defense": [
+      {
+        "attack_percentage": 1,
+        "defense_accuracy": 98.997
+      },
+      {
+        "attack_percentage": 2,
+        "defense_accuracy": 97.997
+      },
+      {
+        "attack_percentage": 3,
+        "defense_accuracy": 96.997
+      },
+      {
+        "attack_percentage": 4,
+        "defense_accuracy": 95.997
+      },
+      {
+        "attack_percentage": 5,
+        "defense_accuracy": 94.998
+      }
+    ]
+  }
+}

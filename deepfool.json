@@ -1,0 +1,32 @@
+{
+  "attack_name": "DeepFool",
+  "dataset": "CICIDS",
+  "baseline_accuracy": 99.99,
+  "attack_results": [
+    { "attack_percentage": 1, "accuracy_after_attack": 98.99 },
+    { "attack_percentage": 2, "accuracy_after_attack": 97.99 },
+    { "attack_percentage": 3, "accuracy_after_attack": 96.99 },
+    { "attack_percentage": 4, "accuracy_after_attack": 95.99 },
+    { "attack_percentage": 5, "accuracy_after_attack": 94.99 }
+  ],
+  "detection_results": {
+    "overall_detection_accuracy": 100.0,
+    "precision": 100.0,
+    "recall": 100.0,
+    "f1_score": 100.0,
+    "status": "Perfect detection under current parameters"
+  },
+  "defense_results": {
+    "defense_strategy": "Adversarial Training (10% DeepFool AEs)",
+    "clean_accuracy": {
+      "defense_model": 100.0
+    },
+    "after_attack_defense": [
+      { "attack_percentage": 1, "defense_accuracy": 100.0 },
+      { "attack_percentage": 2, "defense_accuracy": 100.0 },
+      { "attack_percentage": 3, "defense_accuracy": 100.0 },
+      { "attack_percentage": 4, "defense_accuracy": 100.0 },
+      { "attack_percentage": 5, "defense_accuracy": 100.0 }
+    ]
+  }
+}
